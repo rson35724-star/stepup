@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StepUp — Learn Artificial Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<canvas id="net-bg"></canvas>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <span class="nav-logo">STEPUP</span>
+    <ul class="nav-links">
+      <li><a href="#what-is-ai">What is AI</a></li>
+      <li><a href="#how-it-works">How it Works</a></li>
+      <li><a href="#companies">Companies</a></li>
+      <li><a href="#coding">Coding</a></li>
+      <li><a href="#why-now">Why Now</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title" id="hero-title">STEPUP</h1>
+    <p class="hero-byline">by <span class="byline-name">Sayyoon Anthony Charles</span></p>
+    <p class="hero-tagline">Your first step into the world of Artificial Intelligence.</p>
+    <div class="hero-cta">
+      <a href="#what-is-ai" class="btn btn-primary">Start Learning</a>
+      <a href="#" id="ask-ai-btn" class="btn btn-ghost">Ask the AI</a>
+    </div>
+  </div>
+  <div class="scroll-cue"><span></span></div>
+</header>
+
+<main>
+
+  <section id="what-is-ai" class="section">
+    <p class="eyebrow">01 — Foundations</p>
+    <h2 class="section-title">What is Artificial Intelligence?</h2>
+    <div class="split">
+      <div class="split-text">
+        <p>Artificial Intelligence is the science of building machines that can perform tasks which normally need human thinking — recognizing images, understanding language, making decisions, and finding patterns in data.</p>
+        <p>AI isn't one single thing. It's an umbrella that covers <strong>Machine Learning</strong> (systems that improve from data instead of fixed rules), <strong>Deep Learning</strong> (layered neural networks inspired loosely by the brain), and <strong>Generative AI</strong> (models like Claude and GPT that create text, images, code, and more).</p>
+        <p>Instead of being told exactly what to do step by step, an AI system is shown examples and learns the underlying pattern on its own.</p>
+      </div>
+      <div class="split-visual">
+        <div class="orbit-card">
+          <div class="orbit-ring ring-1"></div>
+          <div class="orbit-ring ring-2"></div>
+          <div class="orbit-ring ring-3"></div>
+          <span class="orbit-core">AI</span>
+          <span class="orbit-label label-ml">Machine<br>Learning</span>
+          <span class="orbit-label label-dl">Deep<br>Learning</span>
+          <span class="orbit-label label-gen">Generative<br>AI</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works" class="section section-alt">
+    <p class="eyebrow">02 — The Process</p>
+    <h2 class="section-title">How AI Actually Works</h2>
+    <p class="section-lead">Every AI model, from a spam filter to a chatbot, is built the same core way — through this four-stage sequence.</p>
+
+    <div class="process">
+      <div class="process-step">
+        <span class="process-num">01</span>
+        <h3>Data Collection</h3>
+        <p>Massive amounts of text, images, or numbers are gathered. This is the raw material — the more relevant and clean the data, the smarter the resulting model.</p>
+      </div>
+      <div class="process-step">
+        <span class="process-num">02</span>
+        <h3>Training</h3>
+        <p>The data is fed through a neural network. The model makes a guess, checks how wrong it was, and adjusts millions (or billions) of internal values called <em>weights</em>. This repeats billions of times.</p>
+      </div>
+      <div class="process-step">
+        <span class="process-num">03</span>
+        <h3>Learning Patterns</h3>
+        <p>Over time the network stops memorizing and starts recognizing structure — grammar, objects, logic, style — the same way a person builds intuition through practice.</p>
+      </div>
+      <div class="process-step">
+        <span class="process-num">04</span>
+        <h3>Inference</h3>
+        <p>The trained model is deployed. When you type a question, it uses everything it learned to predict the best possible response, in a fraction of a second.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="companies" class="section">
+    <p class="eyebrow">03 — The Landscape</p>
+    <h2 class="section-title">The Big Players in AI</h2>
+    <p class="section-lead">A handful of companies are driving most of today's progress in artificial intelligence.</p>
+
+    <div class="company-grid">
+      <div class="company-card">
+        <h3>OpenAI</h3>
+        <p>Creator of the GPT model family and ChatGPT, one of the products that brought generative AI into mainstream use.</p>
+      </div>
+      <div class="company-card">
+        <h3>Anthropic</h3>
+        <p>Builder of the Claude family of models, with a strong focus on AI safety and making models genuinely helpful and reliable.</p>
+      </div>
+      <div class="company-card">
+        <h3>Google DeepMind</h3>
+        <p>Google's AI research lab, known for the Gemini models and landmark work like AlphaFold, which predicts protein structures.</p>
+      </div>
+      <div class="company-card">
+        <h3>Meta AI</h3>
+        <p>Develops the open-weight Llama model family, pushing large chunks of frontier AI research into the open.</p>
+      </div>
+      <div class="company-card">
+        <h3>xAI</h3>
+        <p>Elon Musk's AI company, building the Grok model family and massive training infrastructure like the Colossus supercomputer.</p>
+      </div>
+      <div class="company-card">
+        <h3>Microsoft</h3>
+        <p>A major investor and infrastructure partner in the AI space, embedding AI across Windows, Office, and Azure cloud services.</p>
+      </div>
+      <div class="company-card">
+        <h3>NVIDIA</h3>
+        <p>Doesn't build chatbots — builds the GPUs that train almost every major model, making it one of the most critical companies in AI.</p>
+      </div>
+      <div class="company-card">
+        <h3>DeepSeek</h3>
+        <p>A Chinese AI lab known for releasing highly capable, efficiently trained open-weight models at a fraction of typical cost.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="coding" class="section section-alt">
+    <p class="eyebrow">04 — The Skill Behind It</p>
+    <h2 class="section-title">What Is Coding, Really?</h2>
+    <div class="split reverse">
+      <div class="split-text">
+        <p>Coding is how humans give precise instructions to a computer. A computer doesn't guess what you mean — it does exactly what the code says, so coding is really the skill of thinking in exact, logical steps.</p>
+        <p>Languages like <strong>Python</strong> are especially popular for AI because they read almost like plain English and have huge libraries built specifically for machine learning.</p>
+        <p>You don't need to be a genius to start coding. Every expert began with a single line — usually one that just prints a message to the screen.</p>
+      </div>
+      <div class="split-visual">
+        <div class="code-window">
+          <div class="code-titlebar">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            <span class="code-filename">first_ai_step.py</span>
+          </div>
+          <pre class="code-body"><span class="c-kw">print</span>(<span class="c-str">"Hello, I'm learning AI."</span>)
+
+<span class="c-kw">def</span> <span class="c-fn">next_step</span>(skill):
+    <span class="c-kw">return</span> <span class="c-str">f"Practicing {skill} daily."</span>
+
+<span class="c-comment"># Every expert once wrote line one.</span>
+<span class="c-fn">print</span>(next_step(<span class="c-str">"AI"</span>))</pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why-now" class="section">
+    <p class="eyebrow">05 — Extra Insight</p>
+    <h2 class="section-title">Why Learn AI Right Now?</h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <h3>It's the new literacy</h3>
+        <p>Just like reading, writing, and using a computer became essential skills, understanding AI is becoming a basic requirement across almost every career.</p>
+      </div>
+      <div class="why-card">
+        <h3>The barrier is lower than ever</h3>
+        <p>You no longer need a PhD to build with AI. Free tools, open models, and simple APIs let anyone build a working AI app in a single afternoon.</p>
+      </div>
+      <div class="why-card">
+        <h3>It multiplies your other skills</h3>
+        <p>A designer who knows AI, a writer who knows AI, a student who knows AI — all become dramatically more capable than peers who don't.</p>
+      </div>
+      <div class="why-card">
+        <h3>You shape it, or it shapes you</h3>
+        <p>AI is already influencing hiring, education, and creative work. Understanding how it works puts you in control of that shift instead of just reacting to it.</p>
+      </div>
+    </div>
+    <p class="closing-line">The goal of StepUp is simple: turn curiosity about AI into real, usable understanding — one step at a time.</p>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p class="footer-logo">STEPUP</p>
+  <p>Built by <span class="byline-name">Sayyoon Anthony Charles</span></p>
+</footer>
+
+<div id="chatbot-anchor"></div>
+<div class="chatbot-widget" id="chatbot-widget">
+  <button class="chatbot-toggle" id="chatbot-toggle" aria-label="Open AI chat assistant">
+    <span class="chatbot-toggle-icon">✦</span>
+  </button>
+
+  <div class="chatbot-panel" id="chatbot-panel">
+    <div class="chatbot-header">
+      <span class="chatbot-pulse"></span>
+      <div>
+        <p class="chatbot-title">StepUp Assistant</p>
+        <p class="chatbot-subtitle">Ask me anything about AI</p>
+      </div>
+      <button class="chatbot-close" id="chatbot-close" aria-label="Close chat">&times;</button>
+    </div>
+
+    <div class="chatbot-messages" id="chatbot-messages">
+      <div class="msg msg-bot">
+        Hi! I'm the StepUp Assistant. Ask me anything about AI, coding, or this website.
+      </div>
+    </div>
+
+    <div class="chatbot-typing" id="chatbot-typing" style="display:none;">
+      <span></span><span></span><span></span>
+    </div>
+
+    <form class="chatbot-input-row" id="chatbot-form">
+      <input type="text" id="chatbot-input" placeholder="Type your question..." autocomplete="off" />
+      <button type="submit" class="chatbot-send" aria-label="Send message">➤</button>
+    </form>
+  </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
